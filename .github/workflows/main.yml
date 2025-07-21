@@ -1,0 +1,28 @@
+name: CGHS CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Build Step
+      run: |
+        echo "🔨 Building CGHS Project"
+        ls -R
+
+    - name: Test Step (Simulated)
+      run: |
+        echo "🧪 Running tests"
+        echo "Tests Passed"
+
+    - name: Deploy Step (Simulated)
+      run: |
+        echo "🚀 Deploying project"
+        echo "Simulated deployment done"
